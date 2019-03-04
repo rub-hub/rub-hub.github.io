@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://rub-hub.github.io"
 languageCode = "en-us"
 title = "RUB - Roscoff Unseminars in Bio*"
 theme = "hugo-lithium"
