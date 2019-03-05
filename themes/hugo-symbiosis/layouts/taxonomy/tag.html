@@ -1,0 +1,36 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+	<div class="container" id="post-list">
+		<h1 class="text-center">Category: {{ .Title }}</h1>
+
+		{{ range .Paginator.Pages }}
+		<div class="post">
+			<div class="post-header">
+				<h2><a href="{{ .URL | urlize }}">{{ .Title }}</a></h2>
+				<span class="post-date">{{ .Date.Format "January 2, 2006" }}</span> <span class="post-hour">at {{ dateFormat "15:04" .Date.Local }}</span>
+				<span class="post-categories">
+					{{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}<a href="{{ "/categories/" | relLangURL }}{{$e | urlize }}">{{- $e -}}</a>{{ end }}
+				</span>
+				{{ if .Description }}
+				<div class="post-description">
+					<p>{{ .Description }}</p>
+					<div class="text-center">
+						<a class="btn btn-secondary align-right" href="{{ .URL }}">Read more</a>
+					</div>
+				</div>
+				{{ else }}
+				<div class="post-content">
+					{{ .Content }}
+				</div>
+				{{ end }}
+			</div>
+		</div>
+		{{ end }}
+
+		{{ partial "paginator.html" . }}
+
+
+<!-- Page footer -->
+{{ partial "footer_container" . }}
+{{ partial "footer.html" . }}

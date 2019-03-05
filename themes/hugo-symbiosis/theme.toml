@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Symbiosis"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = ""
+homepage = "https://github.com/eorn/hugo-symbiosis"
+tags = ["academic", "blog"]
+features = []
+min_version = "0.30.2"
+
+[author]
+  name = "Ewen Corre"
+  homepage = "https://ewen.corre.bio"
+
+# If porting an existing theme
+[original]
+  name = "Academic"
+  homepage = "https://themes.gohugo.io/academic"
+  repo = ""

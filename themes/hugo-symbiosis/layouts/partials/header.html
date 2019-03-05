@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme" content="symbiosis">
+	{{ .Hugo.Generator }}
+	{{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}
+
+	{{/* sri stuff to import highlight.js from cloudflare... */}}
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/exo-2-new" type="text/css"/>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/overpass" type="text/css"/> 
+	<link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+
+	{{ if or .Site.RSSLink .RSSLink }}
+	<link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
+	<link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
+	{{ end }}
+
+	<!-- FIXME: icon -->
+	<link rel="icon" type="image/png" href="{{ "/img/icon.png" | relURL }}">
+
+	<link rel="canonical" href="{{ .Permalink }}">
+
+	<title>{{ if not .IsHome }}
+					 {{ if eq .Title "Abouts" }}
+					   {{ .Title | singularize }} | 
+					 {{ else }}
+					 	 {{ .Title }} | 
+					 {{ end }}
+				 {{ end }}{{ .Site.Title }}</title>
+
+	{{ "<!-- isso -->" | safeHTML }}
+	<script data-isso="{{ .Site.BaseURL }}/isso/" src="{{ .Site.BaseURL }}/isso/js/embed.min.js"></script>
+	{{ "<!-- end isso -->" | safeHTML }}
+
+</head>
+
+<body>

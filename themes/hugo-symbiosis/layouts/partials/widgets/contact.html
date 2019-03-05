@@ -1,0 +1,53 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+<!-- Contact widget -->
+<section id="contact" class="about-section">
+	<div class="container mx-auto row">
+		<div class="col-xs-12 col-md-4 section-heading">
+			<h1>Contact</h1>
+		</div>
+		<div class="col-xs-12 col-md-8">
+			{{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
+
+			<ul class="fa-ul" itemscope>
+			{{ with $.Site.Params.email }}
+			<li>
+				<i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
+				<span id="person-email" itemprop="email">
+				{{ . }}
+				</span>
+			</li>
+			{{ end }}
+
+			{{ with $.Site.Params.gpg }}
+			<li>
+				<i class="fa-li fa fa-key fa-2x" aria-hidden="true"></i>
+				<span>
+					My <a href="{{ $.Site.BaseURL }}{{ . }}" target="_blank">GPG key</a>
+				</span>
+			</li>
+			{{ end }}
+
+			{{ with $.Site.Params.keybase }}
+			<li>
+				<i class="fa-li fa fa-lock fa-2x" aria-hidden="true"></i>
+				<span>
+					<a href="https://keybase.io/{{ . }}" target="_blank">@{{ . }}</a> on Keybase
+				</span>
+			</li>
+			{{ end }}
+
+			{{ with $.Site.Params.twitter }}
+			<li>
+				<i class="fa-li fa fa-twitter fa-2x" aria-hidden="true"></i>
+				<span>
+					<a href="https://twitter.com/{{ . }}" target="_blank">@{{ . }}</a> on Twitter
+				</span>
+			</li>
+			{{ end }}
+
+		</div>
+	</div>
+</section>
+

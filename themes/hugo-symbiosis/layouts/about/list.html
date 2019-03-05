@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+{{ range $index, $page := where (where .Data.Pages "Section" "about") ".Params.active" "!=" false }}
+	{{ $params := dict "root" $ "page" $page }}
+	{{ $widget := printf "widgets/%s.html" ( or $page.Params.widget "custom" ) }}
+	{{ partial $widget $params }}
+{{ end }}
+
+
+<!-- Page footer -->
+{{ partial "footer_container" . }}
+{{ partial "footer.html" . }}

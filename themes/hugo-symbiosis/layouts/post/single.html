@@ -1,0 +1,40 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="container" id="content">
+	<div class="post">
+		<div class="post-header">
+			<h2><a href="{{ .URL | urlize }}">{{ .Title }}</a></h2>
+			<span class="post-date">{{ .Date.Format "January 2, 2006" }}</span> <span class="post-hour">at {{ dateFormat "15:04" .Date.Local }}</span>
+			<span class="post-categories">
+				{{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}<a href="{{ "/categories/" | relLangURL }}{{$e | urlize }}">{{- $e -}}</a>{{ end }}
+			</span>
+			{{ if .Description }}
+			<div class="post-description">
+				<p>{{ .Description }}</p>
+				<hr class="read-more">
+			</div>
+			{{ end }}
+			<div class="post-content">
+				{{ .Content }}
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	{{ "<!-- begin comments -->" | safeHTML }}
+	<section id="isso-thread">
+		{{ "<!-- include dummy comments when on localhost -->" | safeHTML }}
+		{{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
+			{{ partial "dummycomments.html" . }}
+		{{ end }}
+		{{ "<!-- endinclude dummy comments when on localhost -->" | safeHTML }}
+	</section>
+	{{ "<!-- end comments -->" | safeHTML }}
+
+</div>
+
+<!-- Page footer -->
+{{ partial "footer_container" . }}
+{{ partial "footer.html" . }}

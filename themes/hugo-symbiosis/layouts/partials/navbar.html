@@ -1,0 +1,59 @@
+<nav class="navbar rounded-bottom sticky-top navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand mb-0 h1" href="{{ "/" | relLangURL }}">
+		{{- if .Site.Params.logo -}}
+			<img src="{{ printf "/img/%s" .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}">
+		{{- else -}}
+			{{- .Site.Title -}}
+		{{- end -}}
+	</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+			{{ range .Site.Menus.main }}
+
+			{{ if .HasChildren}}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ .Name }}
+					<span class="caret"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					{{ range .Children }}
+					<a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+						{{ .Pre }}
+						<span>{{ .Name }}</span>
+					</a>
+					{{ end }}
+        </div>
+      </li>
+
+			{{ else if eq .Name "Categories" }}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ .Name }}
+					<span class="caret"></span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+					{{ range $.Site.Taxonomies.categories.Alphabetical }}
+					<a class="dropdown-item" href="{{ "/categories/" | relLangURL }}{{ .Name | urlize }}">
+						<span>{{ .Name }} ({{ .Count }})</span>
+					</a>
+					{{ end }}
+				</div>
+			</li>
+
+			{{ else }}
+      <li class="nav-item active">
+				<a class="nav-link" href="{{ .URL | relLangURL }}" {{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+					{{ .Pre }}
+					<span>{{ .Name }}</span>
+				</a>
+      </li>
+			{{ end }}
+			{{ end }}
+    </ul>
+  </div>
+</nav>
