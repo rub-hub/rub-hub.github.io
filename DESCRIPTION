@@ -8,7 +8,6 @@ Authors@R: c(
 Imports:
   blogdown,
   devtools,
-  graphicsutils,
   kableExtra,
   htmltools,
   plyr,
