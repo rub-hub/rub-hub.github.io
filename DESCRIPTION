@@ -1,0 +1,23 @@
+Package: placeholder
+Type: Website
+Title: RUB-HUB website.
+Version: 0.1.0
+Authors@R: c(
+  person("Team", "RUB-HUB", role = c("aut", "cre"), email = "ewen.corre@sb-roscoff.fr")
+)
+Imports:
+  blogdown,
+  devtools,
+  graphicsutils,
+  kableExtra,
+  htmltools,
+  plyr,
+  rcrossref,
+  RefManageR,
+  rmarkdown,
+  tidyverse,
+  yaml
+Remotes:
+  rstudio/blogdown,
+  ropensci/rcrossref,
+  ropensci/RefManageR
