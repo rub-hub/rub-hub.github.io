@@ -37,7 +37,6 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
   target_branch: master
   local_dir: public
   on:
