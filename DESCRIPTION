@@ -8,15 +8,6 @@ Authors@R: c(
 Imports:
   blogdown,
   devtools,
-  kableExtra,
-  htmltools,
-  plyr,
-  rcrossref,
-  RefManageR,
-  rmarkdown,
-  tidyverse,
-  yaml
+  rmarkdown
 Remotes:
-  rstudio/blogdown,
-  ropensci/rcrossref,
-  ropensci/RefManageR
+  rstudio/blogdown
