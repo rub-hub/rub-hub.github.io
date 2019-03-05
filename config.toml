@@ -1,7 +1,7 @@
 baseurl = "https://rub-hub.github.io"
 languageCode = "en-us"
 title = "RUB - Roscoff Unseminars in Bio*"
-theme = "hugo-symbiosis"
+theme = "gohugo-theme-ananke"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
