@@ -1,0 +1,46 @@
+language: r
+dist: xenial
+sudo: required
+
+branches:
+  only:
+    - dev
+    - master
+
+cache:
+  packages: yes
+  directories:
+    - $HOME/bin
+
+apt_packages:
+  - libgdal-dev
+  - libgeos-dev
+  - libgeos++-dev
+  - libproj-dev
+  - r-cran-ncdf4
+  - libudunits2-dev
+  - libfreetype6-dev
+  - libpoppler-cpp-dev
+  - libssl-dev
+  - libmagick++-dev
+
+before_install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.54.0_Linux-64bit.deb
+
+before_script:
+  - apt-cache policy libstdc++6
+  
+script:
+  - Rscript -e 'blogdown::build_site()'
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  target_branch: master
+  local_dir: public
+  on:
+    branch: dev
+
+#eiuteriuendpce.'irse.téodpc.op.ietiunraet
