@@ -1,6 +1,6 @@
 ---
 title: Brand new website!
-author: ~
+author: Ewen
 date: '2019-03-05'
 slug: brand-new-website
 categories: [RUB, website]
