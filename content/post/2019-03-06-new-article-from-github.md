@@ -1,7 +1,7 @@
 ---
 title: New article from GitHub
 author: Ewen (from github)
-date: '2019-03-05'
+date: '2019-03-06'
 slug: new-article-from-github
 categories: [RUB, website]
 tags: []
