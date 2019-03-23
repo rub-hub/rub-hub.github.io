@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3dprinting on RUB - Roscoff Unseminars in Bio*</title>
+    <link>https://rub-hub.github.io/categories/3dprinting/</link>
+    <description>Recent content in 3dprinting on RUB - Roscoff Unseminars in Bio*</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rub-hub.github.io/categories/3dprinting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RUB #01: 3D printing</title>
+      <link>https://rub-hub.github.io/2019/03/23/rub-01-3d-printing/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rub-hub.github.io/2019/03/23/rub-01-3d-printing/</guid>
+      <description>In February 11th, we had our 2nd RUB, and the subject was 3D printing. We invited two experts we have in the Roscoff Station (Sébastien and Sébastien). One of them is in charge of the 3D printer of the Station and is able to design 3D models to help scientists, divers etc. The other Sébastien made use of 3D printing for outreaching: he acquired 3D images of marine plankton and printed them, to show the diversity of marine microorganisms (and those are really nice).</description>
+    </item>
+    
+  </channel>
+</rss>

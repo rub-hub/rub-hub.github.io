@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RUB - Roscoff Unseminars in Bio*</title>
+    <link>https://rub-hub.github.io/</link>
+    <description>Recent content on RUB - Roscoff Unseminars in Bio*</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rub-hub.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RUB #01: 3D printing</title>
+      <link>https://rub-hub.github.io/2019/03/23/rub-01-3d-printing/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rub-hub.github.io/2019/03/23/rub-01-3d-printing/</guid>
+      <description>In February 11th, we had our 2nd RUB, and the subject was 3D printing. We invited two experts we have in the Roscoff Station (Sébastien and Sébastien). One of them is in charge of the 3D printer of the Station and is able to design 3D models to help scientists, divers etc. The other Sébastien made use of 3D printing for outreaching: he acquired 3D images of marine plankton and printed them, to show the diversity of marine microorganisms (and those are really nice).</description>
+    </item>
+    
+    <item>
+      <title>RUB #00: Phylogeny 101</title>
+      <link>https://rub-hub.github.io/2019/03/22/rub-00-phylogeny-101/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rub-hub.github.io/2019/03/22/rub-00-phylogeny-101/</guid>
+      <description>Last year we had our first RUB!
+On November 28th, Cédric told us about the basics of phylogeny.
+All the material can be found on the associated Git repository: github.com/rub-hub/rub00.</description>
+    </item>
+    
+    <item>
+      <title>Brand new website!</title>
+      <link>https://rub-hub.github.io/2019/03/05/brand-new-website/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rub-hub.github.io/2019/03/05/brand-new-website/</guid>
+      <description>Here&amp;rsquo;s the first post of a new website, greatly inspired by the inSileco blog.
+To know how it was implemented, I suggest you to read the really nice blog post that describes the process we used to build the website. Briefly, it makes use of the R blogdown package, that is a wrapper package creating hugo websites. We are using Github Pages to host the static website, and Travis CI to build the website in a stable environment.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://rub-hub.github.io/about/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rub-hub.github.io/about/</guid>
+      <description>We are a group of young scientists aiming to promote the unseminars culture in Roscoff as a tool to share our knowledge (and ignorance!), experiences and interests around biological research and open science. RUB is strongly inspired by Heidelberg Unseminars in Bioinformatics, as well as the Barcelona Unseminars in Bioinformatics, two forums committed to coordinate a meeting point for bioinformaticians to encourage networking in their community.
+This project and this website are participant-driven, we encourage you to collaborate!</description>
+    </item>
+    
+  </channel>
+</rss>
